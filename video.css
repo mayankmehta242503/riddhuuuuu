@@ -1,0 +1,106 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(45deg, #ff758c, #ff7eb3, #ff92d4);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Back Button */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+/* Video Gallery */
+.video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Video Items */
+.video-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px; /* Ensures videos don't get too big on large screens */
+}
+
+/* Video Player */
+.video-player {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    object-fit: contain;
+}
+
+/* Hover Effect */
+.video-player:hover {
+    transform: scale(1.05);
+}
+
+/* Captions */
+.caption {
+    font-size: 1em;
+    color: white;
+    font-style: italic;
+    margin-top: 8px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 5px 12px;
+    border-radius: 15px;
+    max-width: 80%;
+    text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .video-gallery {
+        gap: 15px;
+    }
+
+    .video-item {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-item {
+        max-width: 90%;
+    }
+
+    .caption {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .caption {
+        font-size: 0.8em;
+        max-width: 90%;
+    }
+
+    .back-button {
+        font-size: 1em;
+        padding: 8px 12px;
+    }
+}
