@@ -3,12 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
     let firstPage = null;
     let lastPage = null;
     let currentPage = null;
+    let startX = 0; // For mobile swiping
 
-    // **Your Chapter Content (Supports Paragraphs & Formatting)**
     const chapterData = {
-        chapter1: `<p>Once upon a time, a love story began...</p><p>Once upon a time, a love story began...</p><p>Once upon a time, a love story began...</p><p>Once upon a time, a love story began...</p><p>Once upon a time, a love story began...</p><p>Once upon a time, a love story began...</p><p>Once upon a time, a love story began...</p><p>Once upon a time, a love story began...</p><p>Once upon a time, a love story began...</p><p>Once upon a time, a love story began...</p><p>Once upon a time, a love story began...</p><p>Once upon a time, a love story began...</p><p>Once upon a time, a love story began...</p><p>Once upon a time, a love story began...</p><p>Once upon a time, a love story began...</p><p>Once upon a time, a love story began...</p><p>Once upon a time, a love story began...</p><p>Once upon a time, a love story began...</p><p>Once upon a time, a love story began...</p><p>Once upon a time, a love story began...</p><p>Once upon a time, a love story began...</p><p>Once upon a time, a love story began...</p><p>Once upon a time, a love story began...</p><p>Once upon a time, a love story began...</p><p>It was a cold winter night...</p><p>They met under the moonlight...</p>`.repeat(3),
-        chapter2: `<p>More beautiful moments in the journey...</p><p>They traveled the world together...</p><p>Love grew stronger...</p>`.repeat(3),
-        chapter3: `<p>And they lived happily ever after...</p><p>Forever in love...</p>`.repeat(3)
+       "The First Chapter Of US":`<p>Once upon a time, a love story began...</p><p>It was a cold winter night...</p>`.repeat(10),
+       "From Fear To Feelings": `<p>More beautiful moments in the journey...</p><p>They traveled the world together...</p>`.repeat(10),
+       "A Forever Unwritten": `<p>And they lived happily ever after...</p><p>Forever in love...</p>`.repeat(10)
     };
 
     class Page {
@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             lastPage = this;
 
-            // **Show Chapter Title Only on the First Page of Each Chapter**
             if (isFirstOfChapter) {
                 const chapterTitle = document.createElement("h2");
                 chapterTitle.innerText = title;
@@ -37,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             this.textContainer = document.createElement("div");
-            this.textContainer.classList.add("text-content");
             this.element.appendChild(this.textContainer);
         }
 
@@ -45,36 +43,37 @@ document.addEventListener("DOMContentLoaded", () => {
             this.textContainer.innerHTML = content;
         }
     }
-
-    // **Create Static Pages (Cover, Index, Overview)**
+    
+    // Cover Page
     const coverPage = new Page("cover");
-    coverPage.addText(`
-        <img src="./assets/m.jpg" alt="Book Cover" class="cover-img">
-        <h2>📖 Welcome to Your Special Book! ❤️</h2>
-    `);
-
-    const indexPage = new Page("index");
+    coverPage.addText(`<img src="./assets/cover.jpg" alt="Book Cover" class="cover-img"><h2></h2>`);
+    // Index Page
+    const indexPage = new Page("Chapters Of US");
     indexPage.addText(`
-        <h2>📜 Index</h2>
+        <h2 class="chapter-title">Chapters Of US</h2>
         <div class="menu">
-            <div class="menu-item" data-chapter="overview">Overview</div>
-            <div class="menu-item" data-chapter="chapter1">Chapter 1</div>
-            <div class="menu-item" data-chapter="chapter2">Chapter 2</div>
-            <div class="menu-item" data-chapter="chapter3">Chapter 3</div>
+            <div class="menu-item" data-chapter="Before You Begin">Before You Begin</div>
+            <div class="menu-item" data-chapter="The First Chapter Of US">The First Chapter Of US</div>
+            <div class="menu-item" data-chapter="From Fear To Feelings">From Fear To Feelings</div>
+            <div class="menu-item" data-chapter="A Forever Unwritten">A Forever Unwritten</div>
         </div>
-    `);
 
-    const overviewPage = new Page("overview");
-    overviewPage.addText("<h2>📝 Summary of the Book...</h2>");
+    `); 
 
-    // **Create Multi-Page Chapters**
+    // Before You Begin
+    const overviewPage = new Page("Before You Begin"); //
+    overviewPage.addText(`
+    <h2>Before You Begin</h2>
+    <p>This isn’t really a book, and I’m not a writer. But this is our story—the way I remember it, the way it felt, and the way it still lives in my heart. I’ve tried to capture every little moment, from how it all began to everything that led us here. You know my memory isn’t the best, but I’ve written down as much as I could recall. Maybe I missed some details, but what matters most is that every word comes straight from me to you. I hope you’ll like it.</p>
+`);
+
+
+    // Create Pages for Each Chapter
     Object.keys(chapterData).forEach(chapter => {
         let paragraphs = chapterData[chapter].split("</p>").map(p => p + "</p>").filter(p => p.trim() !== "</p>");
         let tempPage = new Page(chapter, `📖 ${chapter.replace("chapter", "Chapter ")}`, true);
         let tempText = "";
-        let isFirstPage = true;
 
-        // **Hidden Test Page for Checking Overflow**
         const testPage = document.createElement("div");
         testPage.classList.add("page", "hidden-page");
         book.appendChild(testPage);
@@ -94,49 +93,42 @@ document.addEventListener("DOMContentLoaded", () => {
         book.removeChild(testPage);
     });
 
-    // **Set Initial Page**
+    // Set Initial Page
     currentPage = firstPage;
     currentPage.element.style.display = "block";
 
-    // **Page Flipping (Arrow Keys)**
+    // Keyboard Navigation
     document.addEventListener("keydown", (event) => {
-        if (event.key === "ArrowRight") flipPage("next");
-        else if (event.key === "ArrowLeft") flipPage("prev");
-    });
-
-    // **Function to Flip Pages**
-    function flipPage(direction) {
-        if (direction === "next" && currentPage.next) {
+        if (event.key === "ArrowRight" && currentPage.next) {
             currentPage.element.style.display = "none";
             currentPage = currentPage.next;
             currentPage.element.style.display = "block";
-        } else if (direction === "prev" && currentPage.previous) {
+        } else if (event.key === "ArrowLeft" && currentPage.previous) {
             currentPage.element.style.display = "none";
             currentPage = currentPage.previous;
             currentPage.element.style.display = "block";
         }
-    }
+    });
 
-    // **Touch Events for Mobile Swiping**
-    let startX = 0;
-    let endX = 0;
-
+    // Mobile Swipe Navigation
     book.addEventListener("touchstart", (event) => {
         startX = event.touches[0].clientX;
     });
 
-    book.addEventListener("touchmove", (event) => {
-        endX = event.touches[0].clientX;
+    book.addEventListener("touchend", (event) => {
+        let endX = event.changedTouches[0].clientX;
+        if (startX - endX > 50 && currentPage.next) {
+            currentPage.element.style.display = "none";
+            currentPage = currentPage.next;
+            currentPage.element.style.display = "block";
+        } else if (endX - startX > 50 && currentPage.previous) {
+            currentPage.element.style.display = "none";
+            currentPage = currentPage.previous;
+            currentPage.element.style.display = "block";
+        }
     });
-
-    book.addEventListener("touchend", () => {
-        let distance = startX - endX;
-        if (distance > 50) flipPage("next"); // Swipe Left → Next Page
-        if (distance < -50) flipPage("prev"); // Swipe Right → Previous Page
-    });
-
-    // **Jump to Specific Chapter from Menu**
-    document.querySelectorAll(".menu-item").forEach(item => {
+     // **Jump to Specific Chapter from Menu**
+     document.querySelectorAll(".menu-item").forEach(item => {
         item.addEventListener("click", () => {
             let targetChapter = item.dataset.chapter;
             let targetPage = firstPage;
@@ -156,3 +148,4 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+ 
