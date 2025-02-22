@@ -15,7 +15,7 @@ body {
   align-items: center;
   width: 100%;
   margin-top: 20px;
-    height: 100%;
+  height: 100%;
 }
 
 #book {
@@ -172,5 +172,24 @@ body {
     font-size: 16px;
   }
 }
+/* Page Number Styling (Exclude Cover Page) */
+/* Import Roboto Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Page Number Styling (Exclude Cover Page) */
+.page:not(:first-child)::after {
+  content: attr(data-page);
+  position: absolute;
+  bottom: 10px;  /* Keeps it at the bottom */
+  left: 50%;
+  transform: translateX(-50%);  /* Centers the number */
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+
 
 
