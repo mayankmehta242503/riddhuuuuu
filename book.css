@@ -77,11 +77,11 @@ body {
 
 .scrollable-section {
   width: 90%;
-  max-width: 600px;
-  height: 20px;
+  max-width: 500px;
+  height: 10px;
   overflow-y: auto;
-  padding: 15px;
-  margin: 20px auto;
+  padding: 10px;
+  margin: 10px auto;
 }
 
 /* === COVER IMAGE === */
@@ -92,7 +92,19 @@ body {
   border-radius: 10px;
   transform: scale(1.1);
 }
+/* Permanent Zoom for Mobile & Tablet */
 
+@media (max-width: 768px) {
+  .cover-img {
+      transform: scale(1.15); /* More zoom for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .cover-img {
+      transform: scale(1.2); /* Maximum zoom for very small screens */
+  }
+}
 /* === CHAPTER MENU STYLES === */
 .index-container {
   display: flex;
@@ -101,6 +113,7 @@ body {
   text-align: center;
   height: 100%;
 }
+
 
 /* === CHAPTER TITLE (h1) === */
 .chapter-title {
