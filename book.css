@@ -64,7 +64,7 @@ body {
 .scrollable-section {
   width: 90%;
   max-width: 600px;
-  height: 50px;
+  height: 20px;
   overflow-y: auto;
   padding: 15px;
   margin: 20px auto;
@@ -75,14 +75,16 @@ body {
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
+  width: 100%;  /* Slightly zoomed */
+  height: 110%; /* Maintain aspect ratio */
+  object-fit: cover;
+  transform: scale(1.1); /* Zoom effect */
+  transition: none;
 }
-.page {
-  padding: 0;  /* Remove padding so the image touches the edges */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
+
+
+
+
 /* === CHAPTER MENU STYLES === */
 .index-container {
   display: flex;
@@ -169,3 +171,5 @@ body {
     font-size: 16px;
   }
 }
+
+
