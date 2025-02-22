@@ -167,3 +167,13 @@ if (isFirstOfChapter) {
     this.element.appendChild(chapterTitle);
 }
 let tempPage = new Page(chapter, `📖 ${chapter.replace("chapter", "Chapter ")}`, true);
+//page no
+document.addEventListener("DOMContentLoaded", function () {
+    const pages = document.querySelectorAll(".page");
+
+    pages.forEach((page, index) => {
+        if (index !== 0) {  // Skip the first page (cover)
+            page.setAttribute("data-page", index);
+        }
+    });
+});
