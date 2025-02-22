@@ -327,8 +327,8 @@ body {
 
 @media (max-width: 480px) {
   #book {
-      max-width: 320px;
-      height: 480px;
+      max-width: 380px;
+      height: 500px;
   }
 }
 
