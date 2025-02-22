@@ -178,42 +178,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
   
-document.addEventListener("DOMContentLoaded", function() {
-    document.body.innerHTML = document.body.innerHTML
-        .replace(/(?<=\b)you'\s*ll/g, "you'll")
-        .replace(/(?<=\b)he'\s*ll/g, "he'll")
-        .replace(/(?<=\b)she'\s*ll/g, "she'll")
-        .replace(/(?<=\b)it'\s*ll/g, "it'll")
-        .replace(/(?<=\b)they'\s*ll/g, "they'll")
-        .replace(/(?<=\b)we'\s*ll/g, "we'll")
+document.addEventListener("DOMContentLoaded", function () {
+    function fixContractions() {
+        document.body.innerHTML = document.body.innerHTML
+            .replace(/\b([A-Za-z]+)\s*'\s*t\b/g, "$1n't")  // isn't, wasn't, haven't, etc.
+            .replace(/\b([A-Za-z]+)\s*'\s*s\b/g, "$1's")   // he's, she's, it's, etc.
+            .replace(/\b([A-Za-z]+)\s*'\s*ll\b/g, "$1'll") // you'll, he'll, she'll, etc.
+            .replace(/\b([A-Za-z]+)\s*'\s*ve\b/g, "$1've") // I've, you've, we've, etc.
+            .replace(/\b([A-Za-z]+)\s*'\s*d\b/g, "$1'd")   // I'd, you'd, he'd, etc.
+            .replace(/\b([A-Za-z]+)\s*'\s*m\b/g, "$1'm");  // I'm
+    }
 
-        .replace(/(?<=\b)I'\s*m/g, "I'm")
-        .replace(/(?<=\b)you'\s*re/g, "you're")
-        .replace(/(?<=\b)he'\s*s/g, "he's")
-        .replace(/(?<=\b)she'\s*s/g, "she's")
-        .replace(/(?<=\b)it'\s*s/g, "it's")
-        .replace(/(?<=\b)we'\s*re/g, "we're")
-        .replace(/(?<=\b)they'\s*re/g, "they're")
-
-        .replace(/(?<=\b)I'\s*d/g, "I'd")
-        .replace(/(?<=\b)you'\s*d/g, "you'd")
-        .replace(/(?<=\b)he'\s*d/g, "he'd")
-        .replace(/(?<=\b)she'\s*d/g, "she'd")
-        .replace(/(?<=\b)it'\s*d/g, "it'd")
-        .replace(/(?<=\b)we'\s*d/g, "we'd")
-        .replace(/(?<=\b)they'\s*d/g, "they'd")
-
-        .replace(/(?<=\b)I'\s*ve/g, "I've")
-        .replace(/(?<=\b)you'\s*ve/g, "you've")
-        .replace(/(?<=\b)we'\s*ve/g, "we've")
-        .replace(/(?<=\b)they'\s*ve/g, "they've")
-
-        .replace(/(?<=\b)I'\s*ll/g, "I'll")
-        .replace(/(?<=\b)you'\s*ll/g, "you'll")
-        .replace(/(?<=\b)he'\s*ll/g, "he'll")
-        .replace(/(?<=\b)she'\s*ll/g, "she'll")
-        .replace(/(?<=\b)it'\s*ll/g, "it'll")
-        .replace(/(?<=\b)we'\s*ll/g, "we'll")
-        .replace(/(?<=\b)they'\s*ll/g, "they'll");
-
+    fixContractions(); // Run function to fix contractions
 });
