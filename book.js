@@ -64,14 +64,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const overviewPage = new Page("#Before You Begin"); //
     overviewPage.addText(`
     <h2>Before You Begin</h2>
-    <p>This isn’t really a book, and I’m not a writer. But this is our story—the way I remember it, the way it felt, and the way it still lives in my heart. I’ve tried to capture every little moment, from how it all began to everything that led us here. You know my memory isn’t the best, but I’ve written down as much as I could recall. Maybe I missed some details, but what matters most is that every word comes straight from me to you. I hope you’ll like it.</p>
+    <p>This isn’t really a book, and I’m not a writer. But this is our story the way I remember it, the way it felt, and the way it still lives in my heart. I’ve tried to capture every little moment, from how it all began to everything that led us here. You know my memory isn’t the best, but I’ve written down as much as I could recall. Maybe I missed some details, but what matters most is that every word comes straight from me to you. I hope you’ll like it...</p>
 `);
 
 
     // Create Pages for Each Chapter
     Object.keys(chapterData).forEach(chapter => {
         let paragraphs = chapterData[chapter].split("</p>").map(p => p + "</p>").filter(p => p.trim() !== "</p>");
-        let tempPage = new Page(chapter, `📖 ${chapter.replace("chapter", "Chapter ")}`, true);
+        let tempPage = new Page(chapter, ` ${chapter.replace("chapter", "Chapter ")}`, true);
         let tempText = "";
 
         const testPage = document.createElement("div");
@@ -178,7 +178,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
-
-
-
