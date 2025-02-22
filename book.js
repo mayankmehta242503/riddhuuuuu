@@ -177,3 +177,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const pages = document.querySelectorAll(".page:not(:first-child)");
+    
+    pages.forEach((page, index) => {
+      page.setAttribute("data-page", index + 1); // Starts from Page 1 (excluding cover)
+    });
+  });
+  
