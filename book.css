@@ -24,8 +24,9 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: auto;
   height: 100vh; /* Full screen height */
-  overflow: hidden; /* Prevents unwanted scrolling */
+    overflow: hidden; /* Prevents unwanted scrolling */
 }
 
 #book {
@@ -290,4 +291,44 @@ body {
   position: relative;
 }
 
+
+@media (max-width: 1024px) { /* Tablets */
+  #book {
+      transform: scale(1.05); /* Slight zoom-in */
+  }
+}
+
+@media (max-width: 768px) { /* Mobile */
+  #book {
+      transform: scale(1.1); /* Extra zoom-in */
+  }
+}
+
+@media (max-width: 480px) { /* Small Phones */
+  #book {
+      transform: scale(1.15); /* More zoom for small devices */
+  }
+}
+
+
+@media (max-width: 1024px) {
+  #book {
+      max-width: 400px;
+      height: 550px;
+  }
+}
+
+@media (max-width: 768px) {
+  #book {
+      max-width: 350px;
+      height: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  #book {
+      max-width: 320px;
+      height: 480px;
+  }
+}
 
