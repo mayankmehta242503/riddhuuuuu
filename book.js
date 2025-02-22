@@ -178,3 +178,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    // Select all text-containing elements inside the book
+    let bookPages = document.querySelectorAll("#book p, #book h2, #book h3, #book span, #book div");
+
+    bookPages.forEach((element) => {
+        element.innerHTML = element.innerHTML.replace(/’/g, "'"); // Replace curly apostrophes with straight ones
+    });
+});
