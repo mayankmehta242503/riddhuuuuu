@@ -167,6 +167,7 @@ if (isFirstOfChapter) {
     this.element.appendChild(chapterTitle);
 }
 let tempPage = new Page(chapter, `📖 ${chapter.replace("chapter", "Chapter ")}`, true);
+
 //page no
 document.addEventListener("DOMContentLoaded", function () {
     const pages = document.querySelectorAll(".page");
@@ -177,17 +178,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-  
-document.addEventListener("DOMContentLoaded", function () {
-    function fixContractions() {
-        document.body.innerHTML = document.body.innerHTML
-            .replace(/\b([A-Za-z]+)\s*'\s*t\b/g, "$1n't")  // isn't, wasn't, haven't, etc.
-            .replace(/\b([A-Za-z]+)\s*'\s*s\b/g, "$1's")   // he's, she's, it's, etc.
-            .replace(/\b([A-Za-z]+)\s*'\s*ll\b/g, "$1'll") // you'll, he'll, she'll, etc.
-            .replace(/\b([A-Za-z]+)\s*'\s*ve\b/g, "$1've") // I've, you've, we've, etc.
-            .replace(/\b([A-Za-z]+)\s*'\s*d\b/g, "$1'd")   // I'd, you'd, he'd, etc.
-            .replace(/\b([A-Za-z]+)\s*'\s*m\b/g, "$1'm");  // I'm
-    }
 
-    fixContractions(); // Run function to fix contractions
-});
+
+
+
