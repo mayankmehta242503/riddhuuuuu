@@ -8,14 +8,15 @@ body {
   padding: 0;
 }
 
-/* === BOOK STYLES === */
+/* === BOOK CONTAINER === */
 .book-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: auto;
   margin-top: 20px;
-  height: 100%;
+  padding: 10px;
 }
 
 #book {
@@ -26,6 +27,7 @@ body {
   perspective: 2000px;
 }
 
+/* === PAGE STYLES === */
 .page {
   width: 100%;
   height: 100%;
@@ -58,9 +60,9 @@ body {
 
 /* === TEXT CONTENT === */
 .text-content {
-  overflow-y: auto;
   max-height: 80%;
   width: 90%;
+  overflow-y: auto;
 }
 
 .scrollable-section {
@@ -90,25 +92,15 @@ body {
   height: 100%;
 }
 
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-/* === CHAPTER TITLE === */
+/* === CHAPTER TITLE (h1) === */
 .chapter-title {
   font-family: 'Freckle Face', cursive;
-  font-size: 28px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: white;
-  padding: 12px 20px;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin: 20px 0;
 }
 
 /* === CHAPTER MENU BOX === */
@@ -159,22 +151,6 @@ body {
   color: white;
 }
 
-/* === RESPONSIVENESS === */
-@media (max-width: 600px) {
-  .chapter-title {
-    font-size: 22px;
-    padding: 10px 15px;
-  }
-
-  .menu {
-    width: 100%;
-  }
-
-  .menu-item {
-    font-size: 16px;
-  }
-}
-
 /* === PAGE NUMBERING === */
 .page:not(:first-child)::after {
   content: attr(data-page);
@@ -188,16 +164,6 @@ body {
   color: rgba(255, 255, 255, 0.7);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   text-align: center;
-}
-
-/* Adjust Book Layout */
-.page {
-  padding: 20px 20px 10px 20px;
-  margin: 10px 0 5px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  text-align: left;
 }
 
 /* === CHAPTER HEADINGS === */
@@ -222,16 +188,69 @@ body {
   margin: 10px 0;
 }
 
-/* === ADJUST TEXT CONTENT === */
-.text-content {
-  padding: 15px;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  width: 90%;
-  max-width: 100%;
+/* === RESPONSIVE STYLES === */
+@media (max-width: 1024px) {
+  #book {
+    max-width: 400px;
+    height: 550px;
+  }
+
+  .chapter-title {
+    font-size: 24px;
+  }
+
+  .menu-item {
+    font-size: 16px;
+  }
 }
 
-/* === FLOATING TITLE ANIMATION === */
+@media (max-width: 768px) {
+  #book {
+    max-width: 350px;
+    height: 500px;
+  }
+
+  .chapter-title {
+    font-size: 22px;
+  }
+
+  .menu-item {
+    font-size: 15px;
+  }
+
+  .page h2 {
+    font-size: 22px;
+  }
+
+  .page p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  #book {
+    max-width: 300px;
+    height: 450px;
+  }
+
+  .chapter-title {
+    font-size: 20px;
+  }
+
+  .menu-item {
+    font-size: 14px;
+  }
+
+  .page h2 {
+    font-size: 20px;
+  }
+
+  .page p {
+    font-size: 16px;
+  }
+}
+
+/* === FLOATING ANIMATIONS === */
 @keyframes floatTitle {
   0% { transform: translateX(0); }
   50% { transform: translateX(30px); }
@@ -248,4 +267,5 @@ body {
   animation: floatTitle 4s infinite ease-in-out;
   position: relative;
 }
+
 
