@@ -112,12 +112,12 @@ const letterContent = [
   "You are my peace when my mind is restless, my warmth on cold days, and the one person who makes my heart race yet feel safe at the same time. ",
   "With you, love isn’t just a word it’s a feeling, a home, a place where I always want to be. ",
   "I need you to know that you’re safe with me. Always. ",
-  "I am all yours—every part of me belongs to you in a way I’ve never belonged to anyone before. ",
+  "I am all yours every part of me belongs to you in a way I’ve never belonged to anyone before. ",
   "No matter what happens, no matter how far we are, my love for you won’t change. ",
   "You have become such a deep part of me that even if the whole world stood against me, I would still choose you. ",
   "Because you are my home. ",
   "I can’t wait for the day I finally get to hold you, to look into your eyes and tell you everything in person. ",
-  "But until then, I need you to know this—there is no one else, and there never will be. ",
+  "But until then, I need you to know this there is no one else, and there never will be. ",
   "It’s only you. It’s always been you. ",
   "Don’t worry, my love. If it takes bowing down in front of this entire universe to make you happy, I will do it without hesitation. ",
   "You are so perfect, almost unreal, for someone like me. ",
@@ -160,4 +160,4 @@ function typeNextLine() {
 // Start typing after a delay
 setTimeout(typeNextLine, 1000);
 
-
+ 
