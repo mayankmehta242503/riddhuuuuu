@@ -124,7 +124,7 @@ const letterContent = [
   "And yet, here you are, loving me in ways I never thought I deserved. ",
   "I love being loved by you. ",
   "Forever yours,",
-  "[Your Name]"
+  "Mayank"
 ];
 
 let currentIndex = 0;
