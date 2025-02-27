@@ -7,6 +7,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* Prevent horizontal scrolling */
+  padding-top: 80px;
 }
  
 /* Glowing Animated Text */
@@ -35,6 +36,7 @@ p {
 .navbar {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   background: rgba( #ff758c, #ff7eb3, #ff92d4, 0.947);
   color: white;
@@ -290,7 +292,7 @@ button, .button {
   font-weight: normal;
   font-style: normal;
 }
-
+ 
 h1 {
   font-family: 'Love Light', cursive;
 }
@@ -299,6 +301,7 @@ h1 {
 h2 {
   font-family: 'Love Light', cursive;
 }
+
 .button:focus,
 .button:active {
     outline: none !important;
