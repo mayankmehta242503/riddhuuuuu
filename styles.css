@@ -299,3 +299,13 @@ h1 {
 h2 {
   font-family: 'Love Light', cursive;
 }
+.button:focus,
+.button:active {
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-tap-highlight-color: transparent; /* Removes blue box and tap highlight */
+}
+
+html, body {
+  -webkit-tap-highlight-color: transparent;
+}
