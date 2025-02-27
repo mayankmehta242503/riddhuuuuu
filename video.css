@@ -128,3 +128,35 @@ body {
         padding: 8px 12px;
     }
 }
+
+/* Moving Title Animation */
+
+.moving-title {
+    font-size: 2em; /* Adjust size */
+    font-weight: bold;
+    font-family: 'Great Vibes', cursive; /* Aesthetic romantic font */
+    color: white;
+    text-align: center;
+    width: max-content;
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    left: 0;
+    animation: moveTitle 8s linear infinite alternate;
+}
+
+/* Moves Only Within Device Width */
+@keyframes moveTitle {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(calc(100vw - 100%));
+    }
+}
+
+
+.moving-title:hover {
+    animation-play-state: paused;
+}
