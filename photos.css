@@ -67,18 +67,38 @@ h1 {
 /* Floating Caption */
 /* Floating Caption with Dynamic Background */
 .caption {
-    font-family: 'Moon Dance', cursive;
-    font-size: 1em;
+    font-family: 'Jolly Lodger', cursive;
+    font-size: 1.2em; /* Light and small */
     color: white;
-    font-style: italic;
-    margin-top: 8px;
-    background: rgba(255, 255, 255, 0.2); /* Adjusts softly based on page color */
-    backdrop-filter: blur(5px); /* Adds a soft glass effect */
+    font-style: normal;
+    margin-top: 10px;
     padding: 5px 12px;
-    border-radius: 15px;
-    max-width: 80%;
+    border-radius: 8px;
+    max-width: 85%;
     text-align: center;
     animation: floatRightToLeft 5s infinite alternate ease-in-out;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    /* Background only behind the text */
+    background: linear-gradient(45deg, rgba(255, 117, 140, 0.7), rgba(255, 126, 179, 0.7), rgba(255, 146, 212, 0.7));
+    display: inline;
+    padding: 2px 8px; /* Creates a subtle highlight effect */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .caption {
+        font-size: 1em;
+        padding: 2px 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .caption {
+        font-size: 0.9em;
+        padding: 1px 5px;
+    }
 }
 
 
