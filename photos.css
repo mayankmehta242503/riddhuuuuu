@@ -65,19 +65,22 @@ h1 {
 }
 
 /* Floating Caption */
+/* Floating Caption with Dynamic Background */
 .caption {
     font-family: 'Moon Dance', cursive;
     font-size: 1em;
     color: white;
     font-style: italic;
     margin-top: 8px;
-    background: rgba(255, 105, 180, 0.8);
+    background: rgba(255, 255, 255, 0.2); /* Adjusts softly based on page color */
+    backdrop-filter: blur(5px); /* Adds a soft glass effect */
     padding: 5px 12px;
     border-radius: 15px;
     max-width: 80%;
     text-align: center;
     animation: floatRightToLeft 5s infinite alternate ease-in-out;
 }
+
 
 /* Back Button */
 .back-button {
