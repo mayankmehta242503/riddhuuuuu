@@ -114,6 +114,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <p>I see us celebrating every little victory, from the biggest milestones to the tiniest moments that only we would understand. I see Sunday mornings where you steal the blanket, and I let you because, at the end of the day, it's just another excuse to pull you closer. I see late nights where we can't decide on a movie, only to end up watching something neither of us planned but both of us enjoy. I see us getting lost in endless conversations, making big plans for the future, knowing that even if life doesn't go exactly as planned, as long as we're together, we'll always find our way.</p>
 
+
+<p>I never spent much time thinking about the future. For me, life was simple i had my parents and my brother, and my only dream was to care for them, to be a good son, and maybe one day, a fun uncle to my brother's kids. I never imagined a family of my own. I thought my world would always revolve around my parents, looking after them, living with them, and making sure they never felt alone.</p>
+
+<p>But then you happened.</p>
+
+<p>And suddenly, my world grew bigger. My future wasn't just about caring for my parents anymore, it included you too. Now, I don't just want to be a good son, I want to give my parents the love of a daughter they never had. I want them to feel your warmth, your presence, and the love only a daughter can give. I want them to see you not as someone new, but as someone who was meant to be a part of our family all along.</p>  
+
+<p>I never thought about love beyond them, but now I want a family with you. Not just as two people in love, but as a home where love grows in every direction. A life where my parents don't just have a son, but a daughter too. Where my brother doesn't just have a brother, but a sister he can count on. A future where 'home' isn't just four walls, but a place built with love, care, and us.<p/>
+
+<p>With you, my idea of a future has changed. It's no longer just about fulfilling responsibilities it's about sharing love, building happiness, and creating a life where we belong, together</p>
+
+
+
+
+
 <p>I can't predict the future. I can't promise that life will always be smooth or that there won't be challenges along the way. But what I can promise is that no matter what happens, I will always choose you. In every version of tomorrow, in every reality, you will always be my favorite part. In every unwritten page of my life, you will be my most beautiful story. And in every lifetime, if I am given the choice, I will find you and love you all over again. Because some love stories have endings, but ours never will. Ours is forever unwritten...<3 </p>
 `
     };
