@@ -1,6 +1,8 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&family=DynaPuff:wght@400;700&display=swap');
+
 /* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
     text-align: center;
     background: linear-gradient(45deg, #ff758c, #ff7eb3, #ff92d4);
     color: #fff;
@@ -36,7 +38,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 400px; /* Ensures videos don't get too big on large screens */
+    max-width: 400px;
 }
 
 /* Video Player */
@@ -54,94 +56,59 @@ body {
     transform: scale(1.05);
 }
 
-/* Captions */
-/* Captions - Instagram Style */
-/* Captions - Instagram Style */
-/* Captions - Romantic Instagram Style */
-/* Captions - Romantic Instagram Style */
+/* Import Jolly Roger Font */
+@import url('https://fonts.googleapis.com/css2?family=Jolly+Roger&display=swap');
+
+/* Floating Caption */
 .caption {
-    font-size: 1.1em;
+    font-family: 'Jolly Roger', cursive; /* Now using Jolly Roger */
+    font-size: 1.2em;
     font-weight: bold;
-    font-family: 'Sigmar', cursive; /* Romantic Bold Font */
     color: white;
-    text-align: center; /* Centered Caption */
-    width: 100%;
-    max-width: 400px; /* Matches Video Width */
-    padding: 10px 15px;
-    border-radius: 15px;
-    background: rgba(236, 43, 139, 0.8); /* Soft Romantic Pink */
-    word-wrap: break-word;
-    letter-spacing: 1px; /* Slight letter gap for better aesthetics */
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6); /* Instagram-like text glow */
-}
+    font-style: normal;
+    margin-top: 10px;
+    padding: 5px 12px;
+    border-radius: 8px;
+    max-width: 85%;
+    text-align: center;
+    animation: floatRightToLeft 5s infinite alternate ease-in-out;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 
-
-.caption a {
-    color: #ffccff; /* Light pink for Instagram vibe */
-    text-decoration: none;
-    font-weight: 500;
+    /* Background only behind the text */
+    background: linear-gradient(45deg, rgba(255, 117, 140, 0.7), rgba(255, 126, 179, 0.7), rgba(255, 146, 212, 0.7));
+    display: inline;
+    padding: 2px 8px; /* Creates a subtle highlight effect */
 }
-.caption {
-    animation: fadeIn 2s ease-in-out;
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; transform: scale(0.9); }
-    100% { opacity: 1; transform: scale(1); }
-}
-
 
 /* Responsive Adjustments */
-@media (max-width: 1024px) {
-    .video-gallery {
-        gap: 15px;
-    }
-
-    .video-item {
-        max-width: 350px;
-    }
-}
-
 @media (max-width: 768px) {
-    .video-gallery {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .video-item {
-        max-width: 90%;
-    }
-
     .caption {
-        font-size: 0.9em;
+        font-size: 1em;
+        padding: 2px 6px;
     }
 }
 
 @media (max-width: 480px) {
     .caption {
-        font-size: 0.8em;
-        max-width: 90%;
-    }
-
-    .back-button {
-        font-size: 1em;
-        padding: 8px 12px;
+        font-size: 0.9em;
+        padding: 1px 5px;
     }
 }
 
-/* Moving Title Animation */
 
+/* Moving Title Animation */
 .moving-title {
-    font-size: 2em; /* Adjust size */
+    font-size: 2em;
     font-weight: bold;
-    font-family: 'Great Vibes', cursive; /* Aesthetic romantic font */
+    font-family: 'DynaPuff', cursive; /* Still using DynaPuff */
     color: white;
     text-align: center;
     width: max-content;
     overflow: hidden;
     white-space: nowrap;
     position: absolute;
-    top: 10px; /* Adjust as needed */
+    top: 10px;
     left: 0;
     animation: moveTitle 8s linear infinite alternate;
 }
@@ -156,7 +123,27 @@ body {
     }
 }
 
-
+/* Pause Animation on Hover */
 .moving-title:hover {
     animation-play-state: paused;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .caption {
+        font-size: 1em;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .caption {
+        font-size: 0.9em;
+        padding: 5px 10px;
+    }
+
+    .back-button {
+        font-size: 1em;
+        padding: 8px 12px;
+    }
 }
