@@ -22,17 +22,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <p>The next day, as the bus emptied and his friends got off at their stops, she unexpectedly came over and sat near him. This time, she initiated a small talk light and casual, yet enough to break the silence lingering from the day before. It wasn't friendship, not yet, but something a little less than that, a subtle connection that neither of them could put into words.</p>
 
-<p>For two or three days, this routine continued. She would come near him, they would exchange a few casual words, and that was it—nothing more, nothing less. Then, one day, as she stepped off the bus, he casually said, "Bye." It wasn't significant or sentimental, just a simple farewell.</p>
+<p>For two or three days, this routine continued. She would come near him, they would exchange a few casual words, and that was it nothing more, nothing less. Then, one day, as she stepped off the bus, he casually said, "Bye." It wasn't significant or sentimental, just a simple farewell.</p>
 
 <p>That turned out to be their last meeting. After that day, they never saw each other again not on the bus, not in the school. It was his final year, and she was just a junior. Their brief interactions faded into obscurity, leaving no lasting mark. It was as if those moments had never happened, like two passing shadows that barely acknowledged each other's existence.</p>
 
 <p>...</p>
 
-<p>One day, as the guy was now in college and busy with his new routine, he came across some news: she had just cleared her 10th board exams and, to no surprise, had topped the state. Impressed but not entirely sure why he felt compelled to, he decided to congratulate her.</p>
+<p>One day, as the guy was now in college and busy with his new routine, he came across some news, she had just cleared her 10th board exams and, to no surprise, had topped the state. Impressed but not entirely sure why he felt compelled to, he decided to congratulate her.</p>
 
 <p>Opening Instagram, he found her profile and sent her a follow request. When she accepted, he quickly typed out a message. But being as clueless as he often was, he couldn't spell "congratulations." Instead, he settled for the simplest version he could manage: "Congrats." It was short, casual, and maybe even a little awkward, but it was the best he could do.</p>
 
-<p>Back in school, she hated our senior batch. Honestly, I don't know why, but in her eyes, we were just another group of loud, reckless, and annoying teenagers. We'd often pull pranks, and there was always this chaotic energy around us that probably grated on her nerves. She avoided talking to anyone from our batch as much as possible. To her, we were nothing but a source of frustration. The whole batch was a blur of teasing and childish antics, and she wasn't interested in being part of that at all.</p>
+<p>Back in school, she hated their senior batch. Honestly, he don't know why, but in her eyes, they were just another group of loud, reckless, and annoying teenagers. they'd often pull pranks, and there was always this chaotic energy around them that probably grated on her nerves. She avoided talking to anyone from their batch as much as possible. To her, they were nothing but a source of frustration. The whole batch was a blur of teasing and childish antics, and she wasn't interested in being part of that at all.</p>
 
 <p>After sending his simple "Congrats," the conversation began slowly. He asked her how she was doing and where she was now, making sure to keep the questions casual. She replied politely, but her tone remained formal and courteous, as if she was still maintaining that boundary between them.</p>
 
