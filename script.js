@@ -11,7 +11,7 @@ function createHeart() {
 setInterval(createHeart, 300);
 
 function updateTimer() {
-  let birthDate = new Date("2008-03-23T19:15:00"); // Corrected birth time
+  let birthDate = new Date("2008-03-24T19:15:00"); // Corrected birth time
   let now = new Date();
   
   let diff = now - birthDate;
